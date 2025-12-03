@@ -1,0 +1,48 @@
+<!-- components/navbar.html -->
+<head>
+  <link rel="icon" src="/assets/images/logo.png">
+</head>
+<nav id="site-navbar" class="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-[#070B34]/80 to-transparent backdrop-blur transition-shadow">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/index.html" class="text-2xl font-bold text-[#4e65cb]">mercuri.world</a>
+      </div>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="nav-link text-white hover:text-[#4e65cb]">Home</a>
+        <a href="/about.html" class="nav-link text-white hover:text-[#4e65cb]">About</a>
+        <a href="/team.html" class="nav-link text-white hover:text-[#4e65cb]">Team</a>
+        <a href="/projects.html" class="nav-link text-white hover:text-[#4e65cb]">Projects</a>
+        <a href="/blog.html" class="nav-link text-white hover:text-[#4e65cb]">Blog</a>
+        <a href="/resources.html" class="nav-link text-white hover:text-[#4e65cb]">Resources</a>
+        <a href="/contact.html" class="nav-link text-white hover:text-[#4e65cb]">Contact</a>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-toggle" class="p-2 focus:outline-none">
+          <span id="menu-open" class="text-white text-2xl">☰</span>
+          <span id="menu-close" class="text-white text-2xl hidden">✕</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#070B34]/95">
+    <ul class="flex flex-col space-y-2 p-4">
+      <li><a href="/" class="mobile-link text-white hover:text-[#4e65cb]">Home</a></li>
+      <li><a href="/about.html" class="mobile-link text-white hover:text-[#4e65cb]">About</a></li>
+      <li><a href="/team.html" class="mobile-link text-white hover:text-[#4e65cb]">Team</a></li>
+      <li><a href="/projects.html" class="mobile-link text-white hover:text-[#4e65cb]">Projects</a></li>
+      <li><a href="/blog.html" class="mobile-link text-white hover:text-[#4e65cb]">Blog</a></li>
+      <li><a href="/resources.html" class="mobile-link text-white hover:text-[#4e65cb]">Resources</a></li>
+      <li><a href="/contact.html" class="mobile-link text-white hover:text-[#4e65cb]">Contact</a></li>
+    </ul>
+  </div>
+</nav>

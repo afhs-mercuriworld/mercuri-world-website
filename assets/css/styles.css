@@ -1,0 +1,128 @@
+/* assets/css/styles.css
+   Global CSS / Tailwind-friendly utilities for Mercuri site
+   Font: Poppins (use Google Fonts link in pages)
+   Colors used in variables for convenience
+*/
+:root{
+  --cetacean-blue: #070B34;
+  --dark-lavender: #6B4984;
+  --regalia: #483475;
+  --space-cadet: #141852;
+  --accent: #4e65cb;
+  --accent-bright: #b4c4f8;
+}
+
+/* Small set of utility styles that complement Tailwind */
+body{
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--cetacean-blue) 0%, var(--space-cadet) 100%);
+  color: #e6e9ff;
+  -webkit-font-smoothing:antialiased;
+  /* Sticky footer setup */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow to push footer down */
+main{
+  flex: 1 0 auto;
+}
+
+/* Footer should stay at bottom */
+footer{
+  flex-shrink: 0;
+}
+
+/* Navbar styles */
+#site-navbar{
+  background: linear-gradient(180deg, rgba(7,11,52,0.6), rgba(20,24,82,0.45));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.nav-link, .mobile-link{
+  color: #e9eeff;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 180ms ease;
+}
+
+.nav-link:hover, .mobile-link:hover{
+  box-shadow: 0 6px 18px rgba(78,101,203,0.18);
+  transform: translateY(-2px);
+  color: var(--accent-bright);
+}
+
+/* Active/Current link */
+.nav-link.active, .mobile-link.active{
+  color: var(--accent-bright);
+  background: rgba(78,101,203,0.07);
+  box-shadow: 0 6px 18px rgba(78,101,203,0.22);
+}
+
+/* Footer helpers */
+.footer-link{
+  color: var(--accent-bright);
+  opacity: 0.95;
+  transition: color 180ms ease, transform 180ms ease;
+}
+.footer-link:hover{
+  color: var(--accent);
+  transform: translateY(-2px);
+  text-shadow: 0 6px 18px rgba(78,101,203,0.18);
+}
+
+.social-icon{
+  color: var(--accent-bright);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+.social-icon:hover{
+  color: var(--accent);
+  transform: translateY(-2px);
+  filter: drop-shadow(0 8px 20px rgba(78,101,203,0.35));
+}
+
+/* Mobile menu animation (slide down) */
+@keyframes slideDown {
+  from { transform: translateY(-8px); opacity: 0 }
+  to   { transform: translateY(0); opacity: 1 }
+}
+
+#mobile-menu.show{
+  animation: slideDown 240ms cubic-bezier(.2,.9,.2,1) both;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Glow utility */
+@keyframes glowAccent {
+  0% { box-shadow: 0 0 0px rgba(78,101,203,0.0) }
+  50%{ box-shadow: 0 0 18px rgba(78,101,203,0.24) }
+  100%{ box-shadow: 0 0 0px rgba(78,101,203,0.0) }
+}
+
+.glow-accent{
+  animation: glowAccent 2.4s ease-in-out infinite;
+}
+
+/* Sticky background blur when scrolled */
+#site-navbar.scrolled{
+  backdrop-filter: blur(6px) saturate(120%);
+  background: linear-gradient(180deg, rgba(7,11,52,0.85), rgba(20,24,82,0.85));
+}
+
+/* Responsive spacing presets (used in templates) */
+.container-max{
+  max-width: 76rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Small helpers for accessibility focus outlines */
+:focus{ outline: 2px solid rgba(78,101,203,0.18); outline-offset: 2px }

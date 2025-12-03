@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mercuri — Projects</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="/assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="min-h-screen bg-[#070B34] text-white">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="pt-20 container-max space-y-16 px-4">
+
+    <!-- Hero Section -->
+    <section class="text-center py-12">
+      <h1 class="text-4xl font-bold mb-4">Our Projects</h1>
+      <p class="text-[#b4c4f8] max-w-3xl mx-auto">
+        Explore the initiatives, workshops, and projects that Mercuri has worked on so far, and see what's coming next.
+      </p>
+    </section>
+
+    <!-- Our Work So Far -->
+    <section>
+      <h2 class="text-3xl font-semibold text-white mb-8 text-center">Our Work So Far</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Project Placeholder -->
+         <p class="text-[#b4c4f8]">No projects yet...</p>
+        <!-- <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Project 1" 
+             data-desc="Brief description of the initiative or workshop."
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Project 1</h3>
+          <p class="text-[#b4c4f8] text-sm">Brief description of the initiative or workshop.</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Project 2" 
+             data-desc="Brief description of the initiative or workshop."
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Project 2</h3>
+          <p class="text-[#b4c4f8] text-sm">Brief description of the initiative or workshop.</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Project 3" 
+             data-desc="Brief description of the initiative or workshop."
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Project 3</h3>
+          <p class="text-[#b4c4f8] text-sm">Brief description of the initiative or workshop.</p>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Upcoming Projects -->
+    <section>
+      <h2 class="text-3xl font-semibold text-white mb-8 text-center">Upcoming Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Microstressor Survey" 
+             data-desc="Expected launch: Dec 16, 2025"
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/30 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Microstressor Survey</h3>
+          <p class="text-[#b4c4f8] text-sm">Expected launch: Dec 9, 2025</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Publish Blogs on Phenomena" 
+             data-desc="Expected launch: Jan 13, 2026"
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/30 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Publish Blogs on Phenomena</h3>
+          <p class="text-[#b4c4f8] text-sm">Expected launch: Jan 6, 2026</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-lg text-center space-y-3 cursor-pointer project-card" 
+             data-title="Thrive App" 
+             data-desc="Expected launch: Mar 10, 2026"
+             data-media='["placeholder1","placeholder2"]'>
+          <span class="inline-block w-full h-48 bg-[#4e65cb]/30 rounded-lg"></span>
+          <h3 class="text-xl font-semibold text-white mt-2">Thrive App</h3>
+          <p class="text-[#b4c4f8] text-sm">Expected launch: Mar 10, 2026</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+    <!-- Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center opacity-0 scale-95 pointer-events-none transition-all duration-300 z-50 px-2">
+        <div class="bg-[#070B34] rounded-lg max-w-2xl w-full p-6 relative transform transition-transform duration-300 sm:px-8">
+            <button id="modal-close" class="absolute top-4 right-4 text-white text-2xl sm:text-3xl">✕</button>
+            <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-white mb-4"></h3>
+            <p id="modal-desc" class="text-[#b4c4f8] mb-4 text-sm sm:text-base"></p>
+
+            <!-- Media Carousel -->
+            <div id="modal-carousel" class="relative flex items-center justify-start space-x-2 overflow-x-auto snap-x snap-mandatory">
+            <!-- Placeholder spans will be inserted dynamically -->
+            </div>
+            <div class="flex justify-center space-x-4 mt-4">
+                <button id="carousel-prev" class="px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0]">◀ Prev</button>
+                <button id="carousel-next" class="px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0]">Next ▶</button>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Script -->
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/particles.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('project-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDesc = document.getElementById('modal-desc');
+      const modalCarousel = document.getElementById('modal-carousel');
+      const closeBtn = document.getElementById('modal-close');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      let currentIndex = 0;
+      let currentMedia = [];
+
+      function openModal(title, desc, media) {
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        currentMedia = media;
+        currentIndex = 0;
+        updateCarousel();
+
+        modal.classList.remove('pointer-events-none', 'opacity-0', 'scale-95');
+        modal.classList.add('opacity-100', 'scale-100');
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0', 'scale-95');
+        modal.classList.remove('opacity-100', 'scale-100');
+        setTimeout(() => modal.classList.add('pointer-events-none'), 300);
+      }
+
+      function updateCarousel() {
+        modalCarousel.innerHTML = '';
+        if (currentMedia.length > 0) {
+          const span = document.createElement('span');
+          span.className = 'inline-block w-full h-64 bg-[#4e65cb]/40 rounded-lg';
+          span.textContent = currentMedia[currentIndex]; // Placeholder label
+          modalCarousel.appendChild(span);
+        }
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if(currentMedia.length === 0) return;
+        currentIndex = (currentIndex - 1 + currentMedia.length) % currentMedia.length;
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if(currentMedia.length === 0) return;
+        currentIndex = (currentIndex + 1) % currentMedia.length;
+        updateCarousel();
+      });
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const media = JSON.parse(card.dataset.media || '[]');
+          openModal(card.dataset.title, card.dataset.desc, media);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', e => {
+        if(e.target === modal) closeModal();
+      });
+    });
+  </script>
+</body>
+</html>
