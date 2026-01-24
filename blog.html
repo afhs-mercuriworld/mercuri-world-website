@@ -16,6 +16,26 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    /* Modal animations */
+    #post-modal .modal-panel{
+      transform: translateY(12px) scale(.98);
+      opacity: 0;
+      transition: transform 260ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease-out;
+    }
+    #post-modal .modal-in{
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    #post-modal .modal-out{
+      transform: translateY(12px) scale(.98);
+      opacity: 0;
+    }
+    /* Overlay fade */
+    #modal-overlay{opacity:0; transition: opacity 260ms ease-out;}
+    #modal-overlay.overlay-in{opacity:1}
+    #modal-overlay.overlay-out{opacity:0}
+  </style>
 </head>
 <body class="min-h-screen bg-[#070B34] text-white">
 
@@ -36,9 +56,7 @@
     <section class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-semibold mb-6">Filter by Month / Year</h2>
       <div class="flex flex-wrap gap-3 mb-4">
-        <button class="month-filter px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0] text-white" data-month="November" data-year="2025">Nov 2025</button>
-        <button class="month-filter px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0] text-white" data-month="October" data-year="2025">Oct 2025</button>
-        <button class="month-filter px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0] text-white" data-month="September" data-year="2025">Sep 2025</button>
+        <button class="month-filter px-3 py-1 bg-[#4e65cb] rounded hover:bg-[#3b4db0] text-white" data-month="January" data-year="2026">Jan 2026</button>
         <!-- Add more months as needed -->
         <button id="reset-filters" class="px-3 py-1 bg-[#b4c4f8] text-[#070B34] rounded hover:bg-[#9ab0f0]">Reset Filters</button>
       </div>
@@ -46,23 +64,20 @@
       <!-- Blog Grid -->
       <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <!-- Blog Post Placeholder -->
-        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post" data-month="November" data-year="2025">
+        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post cursor-pointer" data-month="January" data-year="2026" data-full="
+            <p>What if someone told you that everything you've ever worked for is meaningless—that all your achievements are just a result of luck, perfect timing, or even mistakes?</p>
+            <p>What if someone told you that you would never be good enough to live up to anyone's expectations, repeating it every hour, every minute, and every second of every day? You would probably feel hurt or angry, but would you believe them? The real question is, how far would you go to prove that person wrong?</p>
+            <p>If you do believe them, then you have imposter syndrome, a widely recognized psychological phenomenon that affects teens and adults every day. It's the constant feeling that your achievements aren't deserved, and despite evidence of hard work and success, you still feel like a fraud at the end of the day. While it's not specifically diagnosed, it's a common psychological experience that causes perfectionism, low self-esteem, self-doubt, and the constant anxiety of being “found out” as a fraud.</p>
+            <p>In 1978, psychologists Pauline Clance and Suzanne Imes wrote a paper called “The Imposter Phenomenon in High Achieving Women,” publishing research showing that adults in knowledge-intensive fields, specifically 100 women with medical professions, struggled with imposter syndrome the most. Successful people, like famous musicians, authors, actors, and influential societal figures, have had or still face imposter syndrome. In fact, Albert Einstein himself once said, “The exaggerated esteem in which my lifework is held makes me very ill at ease. I feel compelled to think of myself as an involuntary swindler.”</p>
+            <p>Successful and intelligent adults aren't the only people to face imposter syndrome. It's becoming more prevalent in teens today. Expectations from teachers and parents, grades, and other school or personal challenges can also contribute to teens developing imposter syndrome. But it doesn't stop at school stress. That same stress will also start to affect sports, relationships, and extracurricular activities. Teens aspire to be perfect in every aspect, which can become unhealthy. It leads to chronic stress, burnout, anxiety, and depression, creating a cycle of self-doubt, overwork, and exhaustion that is harmful both physically and mentally. This is a dangerous realization, and the worst part? The global prevalence of imposter syndrome is skyrocketing, with around 70% of the world experiencing it.</p>
+            <p>The only way to stop imposter syndrome is to overcome it. First, it's imperative to recognize the fear of perfection and normalize the feeling. Being scared is okay, but what isn't is working past your limit to make the fear go away. Try using healthier methods, like talking about your feelings with parents, friends, teachers, or a therapist.</p>
+            <p>It's also important to remember that your facts and feelings are not the same. If you have consistently won six competitions in a row, or gotten only straight As the entire semester, is it really luck? Don't let your mind give you unnecessary self-doubt; instead, write positive feedback, challenge negative self-talk, and list your accomplishments.</p>
+            <p>Lastly, remember that you cannot be perfect. Everyone makes mistakes, and it's totally fine. You don't need to set yourself at unrealistic standards and hold yourself back from how much you've already achieved. Instead of trying to be flawless, focus on growth, progress, and showing up as the best version of yourself each day. Your value comes from your effort, your resilience, and your willingness to keep learning.</p>
+          ">
           <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
-          <h3 class="text-xl font-semibold text-white mt-2">Latest Blog 1</h3>
-          <p class="text-[#b4c4f8] text-sm">Brief summary or excerpt of the blog post.</p>
-          <p class="text-[#b4c4f8] text-xs">Nov 1, 2025</p>
-        </div>
-        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post" data-month="November" data-year="2025">
-          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
-          <h3 class="text-xl font-semibold text-white mt-2">Latest Blog 2</h3>
-          <p class="text-[#b4c4f8] text-sm">Brief summary or excerpt of the blog post.</p>
-          <p class="text-[#b4c4f8] text-xs">Nov 10, 2025</p>
-        </div>
-        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post" data-month="October" data-year="2025">
-          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
-          <h3 class="text-xl font-semibold text-white mt-2">October Blog 1</h3>
-          <p class="text-[#b4c4f8] text-sm">Brief summary or excerpt of the blog post.</p>
-          <p class="text-[#b4c4f8] text-xs">Oct 15, 2025</p>
+          <h3 class="text-xl font-semibold text-white mt-2">Imposter Syndrome</h3>
+          <p class="text-[#b4c4f8] text-sm">What is imposter syndrome, why is it becoming more common, and how can I tell if I have it?</p>
+          <p class="text-[#b4c4f8] text-xs">Jan 24, 2026</p>
         </div>
         <!-- Add more blog post placeholders -->
       </div>
@@ -77,6 +92,23 @@
   <script src="/assets/js/script.js" defer></script>
   <script src="/assets/js/particles.js" defer></script>
   
+  <!-- Modal for expanded blog post -->
+  <div id="post-modal" class="fixed inset-0 z-50 hidden items-center justify-center px-4 py-8">
+    <div id="modal-overlay" class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-3xl w-full bg-[#0b123f] text-white rounded-lg shadow-lg z-10 overflow-auto max-h-[90vh] modal-panel">
+      <div class="flex justify-between items-start p-6 border-b border-white/10">
+        <div>
+          <h3 id="modal-title" class="text-2xl font-semibold">Post Title</h3>
+          <p id="modal-date" class="text-sm text-[#b4c4f8] mt-1">Jan 24, 2026</p>
+        </div>
+        <button id="modal-close" aria-label="Close" class="text-white/80 hover:text-white ml-4">✕</button>
+      </div>
+      <div id="modal-content" class="p-6 prose prose-invert text-[#dbe6ff]"> 
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       const monthButtons = document.querySelectorAll('.month-filter');
@@ -101,6 +133,77 @@
         posts.forEach(post=>{
           post.style.display = '';
         });
+      });
+
+      // Modal / expand functionality with animations
+      const modal = document.getElementById('post-modal');
+      const modalOverlay = document.getElementById('modal-overlay');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDate = document.getElementById('modal-date');
+      const modalContent = document.getElementById('modal-content');
+      const modalClose = document.getElementById('modal-close');
+      const modalPanel = modal.querySelector('.modal-panel');
+
+      let closingHandler = null;
+
+      function openModal(postEl){
+        const title = postEl.querySelector('h3')?.innerText || 'Untitled Post';
+        const date = postEl.querySelector('.text-xs')?.innerText || postEl.dataset.date || '';
+        const full = postEl.dataset.full || '<p>No extra content provided yet.</p>';
+
+        modalTitle.innerText = title;
+        modalDate.innerText = date;
+        // Allow HTML in data-full for rich content
+        modalContent.innerHTML = full;
+
+        // show modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        // animate overlay and panel
+        modalOverlay.classList.remove('overlay-out');
+        modalOverlay.classList.add('overlay-in');
+
+        // ensure panel starts in 'out' state then switch to 'in' for transition
+        modalPanel.classList.remove('modal-out');
+        // force layout so the transition will run
+        void modalPanel.offsetWidth;
+        modalPanel.classList.add('modal-in');
+
+        // focus close for keyboard users
+        modalClose.focus();
+      }
+
+      function closeModal(){
+        // start closing animation
+        modalPanel.classList.remove('modal-in');
+        modalPanel.classList.add('modal-out');
+        modalOverlay.classList.remove('overlay-in');
+        modalOverlay.classList.add('overlay-out');
+
+        // wait for panel transition to finish before hiding
+        closingHandler = function handler(e){
+          if(e.target !== modalPanel) return;
+          modal.classList.remove('flex');
+          modal.classList.add('hidden');
+          modalContent.innerHTML = '';
+          modalPanel.removeEventListener('transitionend', closingHandler);
+          closingHandler = null;
+        };
+        modalPanel.addEventListener('transitionend', closingHandler);
+      }
+
+      posts.forEach(post => {
+        post.addEventListener('click', () => openModal(post));
+        post.addEventListener('keypress', (e) => {
+          if(e.key === 'Enter' || e.key === ' ') openModal(post);
+        });
+      });
+
+      modalOverlay.addEventListener('click', closeModal);
+      modalClose.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
       });
     });
   </script>
