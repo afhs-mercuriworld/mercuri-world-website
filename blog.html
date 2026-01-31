@@ -35,6 +35,13 @@
     #modal-overlay{opacity:0; transition: opacity 260ms ease-out;}
     #modal-overlay.overlay-in{opacity:1}
     #modal-overlay.overlay-out{opacity:0}
+
+    #modal-content p {
+      margin-bottom: 1rem;
+    }
+    #modal-content p:last-child {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-[#070B34] text-white">
@@ -62,24 +69,24 @@
       </div>
 
       <!-- Blog Grid -->
-      <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-fr items-stretch">
         <!-- Blog Post Placeholder -->
-        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post cursor-pointer" data-month="January" data-year="2026" data-full="
-            <p>What if someone told you that everything you've ever worked for is meaningless—that all your achievements are just a result of luck, perfect timing, or even mistakes?</p>
-            <p>What if someone told you that you would never be good enough to live up to anyone's expectations, repeating it every hour, every minute, and every second of every day? You would probably feel hurt or angry, but would you believe them? The real question is, how far would you go to prove that person wrong?</p>
-            <p>If you do believe them, then you have imposter syndrome, a widely recognized psychological phenomenon that affects teens and adults every day. It's the constant feeling that your achievements aren't deserved, and despite evidence of hard work and success, you still feel like a fraud at the end of the day. While it's not specifically diagnosed, it's a common psychological experience that causes perfectionism, low self-esteem, self-doubt, and the constant anxiety of being “found out” as a fraud.</p>
-            <p>In 1978, psychologists Pauline Clance and Suzanne Imes wrote a paper called “The Imposter Phenomenon in High Achieving Women,” publishing research showing that adults in knowledge-intensive fields, specifically 100 women with medical professions, struggled with imposter syndrome the most. Successful people, like famous musicians, authors, actors, and influential societal figures, have had or still face imposter syndrome. In fact, Albert Einstein himself once said, “The exaggerated esteem in which my lifework is held makes me very ill at ease. I feel compelled to think of myself as an involuntary swindler.”</p>
-            <p>Successful and intelligent adults aren't the only people to face imposter syndrome. It's becoming more prevalent in teens today. Expectations from teachers and parents, grades, and other school or personal challenges can also contribute to teens developing imposter syndrome. But it doesn't stop at school stress. That same stress will also start to affect sports, relationships, and extracurricular activities. Teens aspire to be perfect in every aspect, which can become unhealthy. It leads to chronic stress, burnout, anxiety, and depression, creating a cycle of self-doubt, overwork, and exhaustion that is harmful both physically and mentally. This is a dangerous realization, and the worst part? The global prevalence of imposter syndrome is skyrocketing, with around 70% of the world experiencing it.</p>
-            <p>The only way to stop imposter syndrome is to overcome it. First, it's imperative to recognize the fear of perfection and normalize the feeling. Being scared is okay, but what isn't is working past your limit to make the fear go away. Try using healthier methods, like talking about your feelings with parents, friends, teachers, or a therapist.</p>
-            <p>It's also important to remember that your facts and feelings are not the same. If you have consistently won six competitions in a row, or gotten only straight As the entire semester, is it really luck? Don't let your mind give you unnecessary self-doubt; instead, write positive feedback, challenge negative self-talk, and list your accomplishments.</p>
-            <p>Lastly, remember that you cannot be perfect. Everyone makes mistakes, and it's totally fine. You don't need to set yourself at unrealistic standards and hold yourself back from how much you've already achieved. Instead of trying to be flawless, focus on growth, progress, and showing up as the best version of yourself each day. Your value comes from your effort, your resilience, and your willingness to keep learning.</p>
-          ">
-          <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
-          <h3 class="text-xl font-semibold text-white mt-2">Imposter Syndrome</h3>
-          <p class="text-[#b4c4f8] text-sm">What is imposter syndrome, why is it becoming more common, and how can I tell if I have it?</p>
-          <p class="text-[#b4c4f8] text-xs">Jan 24, 2026 • Ananya</p>
-        </div>
-        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post cursor-pointer" data-month="January" data-year="2026" data-full="
+          <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post cursor-pointer flex flex-col h-full" data-month="January" data-year="2026" data-full="
+              <p>What if someone told you that everything you've ever worked for is meaningless—that all your achievements are just a result of luck, perfect timing, or even mistakes?</p>
+              <p>What if someone told you that you would never be good enough to live up to anyone's expectations, repeating it every hour, every minute, and every second of every day? You would probably feel hurt or angry, but would you believe them? The real question is, how far would you go to prove that person wrong?</p>
+              <p>If you do believe them, then you have imposter syndrome, a widely recognized psychological phenomenon that affects teens and adults every day. It's the constant feeling that your achievements aren't deserved, and despite evidence of hard work and success, you still feel like a fraud at the end of the day. While it's not specifically diagnosed, it's a common psychological experience that causes perfectionism, low self-esteem, self-doubt, and the constant anxiety of being “found out” as a fraud.</p>
+              <p>In 1978, psychologists Pauline Clance and Suzanne Imes wrote a paper called “The Imposter Phenomenon in High Achieving Women,” publishing research showing that adults in knowledge-intensive fields, specifically 100 women with medical professions, struggled with imposter syndrome the most. Successful people, like famous musicians, authors, actors, and influential societal figures, have had or still face imposter syndrome. In fact, Albert Einstein himself once said, “The exaggerated esteem in which my lifework is held makes me very ill at ease. I feel compelled to think of myself as an involuntary swindler.”</p>
+              <p>Successful and intelligent adults aren't the only people to face imposter syndrome. It's becoming more prevalent in teens today. Expectations from teachers and parents, grades, and other school or personal challenges can also contribute to teens developing imposter syndrome. But it doesn't stop at school stress. That same stress will also start to affect sports, relationships, and extracurricular activities. Teens aspire to be perfect in every aspect, which can become unhealthy. It leads to chronic stress, burnout, anxiety, and depression, creating a cycle of self-doubt, overwork, and exhaustion that is harmful both physically and mentally. This is a dangerous realization, and the worst part? The global prevalence of imposter syndrome is skyrocketing, with around 70% of the world experiencing it.</p>
+              <p>The only way to stop imposter syndrome is to overcome it. First, it's imperative to recognize the fear of perfection and normalize the feeling. Being scared is okay, but what isn't is working past your limit to make the fear go away. Try using healthier methods, like talking about your feelings with parents, friends, teachers, or a therapist.</p>
+              <p>It's also important to remember that your facts and feelings are not the same. If you have consistently won six competitions in a row, or gotten only straight As the entire semester, is it really luck? Don't let your mind give you unnecessary self-doubt; instead, write positive feedback, challenge negative self-talk, and list your accomplishments.</p>
+              <p>Lastly, remember that you cannot be perfect. Everyone makes mistakes, and it's totally fine. You don't need to set yourself at unrealistic standards and hold yourself back from how much you've already achieved. Instead of trying to be flawless, focus on growth, progress, and showing up as the best version of yourself each day. Your value comes from your effort, your resilience, and your willingness to keep learning.</p>
+            ">
+            <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
+            <h3 class="text-xl font-semibold text-white">Imposter Syndrome</h3>
+            <p class="text-[#b4c4f8] text-sm">What is imposter syndrome, why is it becoming more common, and how can I tell if I have it?</p>
+            <p style="margin-top: auto !important" class="mt-auto text-[#b4c4f8] text-xs">Jan 24, 2026 • Ananya</p>
+          </div>
+        <div class="p-6 bg-white/5 rounded-lg space-y-3 blog-post cursor-pointer flex flex-col h-full" data-month="January" data-year="2026" data-full="
             <p>Imagine you’re scrolling through your For You Page. You notice a variety of posts – some with wholesome influencers, and some filled with energy drainers whose toxicity makes you feel angry, shocked, or worried. The funny and heartwarming stories are there, but they’re overpowered by hateful posts swamped with thousands of angry comments, while the positive ones barely reach anyone. This is the reality of social media: negativity travels like wildfire compared to positivity, shaping what we see and how we feel online. Essentially, it creates a rabbit hole of toxicity.</p>
             <p>Social media is multifaceted. It’s a place to share knowledge, relatability, and, most of all, opinions. At its best, these platforms create connection and conversation. People bond through shared experiences, humor, creativity, and community support. Social media can spread meaningful information, amplify underrepresented voices, and allow individuals to express themselves in ways that feel authentic and validating. In many spaces, users seek inspiration, motivation, and belonging — especially teens and young adults who are still figuring out their identities. These elements show why social media continues to attract people: it offers opportunities for learning, relatability, collaboration, and emotional connection, even if those positives are not always what rises to the top of our feeds.</p>
             <p>But alongside these benefits, social media’s network — for the most part — is shaped by opinions spread by influencers and users who provoke or engage audiences to attract attention, even when that attention isn’t positive. Take X, for example, a platform known for the arguments ignited by its users. Researchers Jonas P. Schöne, David Garcia, Brian Parkinson, and Amit Goldenberg conducted a study to understand the emotional impacts of social media by analyzing whether positive or negative posts gained more popularity. Despite adults’ warnings against social media platforms, many teens don’t view them as harmful or impactful. However, the findings of their study suggest otherwise.</p>
@@ -90,11 +97,11 @@
           ">
           <span class="inline-block w-full h-48 bg-[#4e65cb]/50 rounded-lg"></span>
           <h3 class="text-xl font-semibold text-white mt-2">The Psychological Impacts of Social Media</h3>
-          <p class="text-[#b4c4f8] text-sm">Imagine you're scrolling through your For You Page. You notice a variety of posts — some with wholesome influencers, and some filled with energy drainers whose...</p>
-          <p class="text-[#b4c4f8] text-xs">Jan 25, 2026 • Ananya</p>
+          <p class="text-[#b4c4f8] text-sm">Imagine you're scrolling through your For You Page. You notice a variety of posts — some with wholesome influencers, and some filled with energy drainers whose...</p> <!-- Preview paragraph -->
+          <p style="margin-top: auto !important; padding-top: 0.5rem;" class="mt-auto text-[#b4c4f8] text-xs">Jan 25, 2026 • Ananya</p>
         </div>
         <!-- Add more blog post placeholders -->
-      </div>
+
     </section>
 
   </main>
