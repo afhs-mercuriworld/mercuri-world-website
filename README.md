@@ -13,13 +13,13 @@ A modern, responsive multi-page website for **Mercuri World AFHS**, a neuroscien
 
 ``` shell
 mercuri-world-website/
-├── assets/                # Assets folder
-│   ├── css                # CSS folder
+├── assets/               
+│   ├── css                
 │   │   └── styles.css     # Centralized CSS file
-│   ├── js/                # JavaScript folder 
+│   ├── js/                
 │   │   ├── particles.js   # Particle JavaScript file
 │   │   └── script.js      # Main JavaScript file   
-│   └── images/            # image folder
+│   └── images/            
 │       ├── ananya.png     # Ananya's photo   
 │       ├── anika.png      # Anika's photo
 │       ├── ardra.png      # Ardra's photo
@@ -29,22 +29,21 @@ mercuri-world-website/
 │       ├── harsha.png     # Harsha's photo
 │       ├── anya.png       # Anya's photo
 │       ├── aboli.png      # Aboli's photo
+│       ├── dandelion.png  # Image for Dandelion poem
 │       └── logo.png       # club logo
-├── components/            # components folder
+├── components/           
 │   ├── footer.html        # Footer
 │   └── navbar.html        # Navbar
-├── template/              # Template folder
+├── template/             
 │   └── template.html      # Basic template for pages
-├── server/                # Server related things
+├── server/             
 │   ├── node_modules/
 │   │   └── ...
-│   ├── .env
 │   ├── .env.example
 │   ├── package-lock.json
 │   ├── package.json       
 │   ├── server.js          # JavaScript program for the server
 │   └── SETUP_GUIDE.md     # Setup guide for AI assistant 
-├── .gitignore             # .gitignore file
 ├── about.html             # About page
 ├── blog.html              # Blog page
 ├── contact.html           # Contact page
@@ -75,13 +74,13 @@ mercuri-world-website/
     - **Contact**: Working contact form and social links with hover effects.
 - **Dynamic Background**:
     - Dots are scattered around the background of the website
-    - Dots form faint lines when near another do
+    - Dots form faint lines when near another
 
 ---
 
 ## JavaScript Features
 
-- Smooth scroll for in-page anchors. <!-- 67 -->
+- Smooth scroll for in-page anchors.
 - Mobile menu toggle.
 - Active link highlighting in navbar.
 - Navbar sticky blur effect on scroll.
@@ -120,9 +119,10 @@ open index.html
 ---
 
 ## Deployment
-- Currently deployed under ```https://mercuri-world-website.vercel.app```
+- Currently deployed under ```https://mercuri-world-website.vercel.app``` and ```https://afhs-mercuri.org```
     - Deployed with Vercel - a free web hosting platform that allows you to easily host your website straight from your GitHub repo
-- Will be deployed with actual domain in the future
+
+---
 
 ## Author
 
